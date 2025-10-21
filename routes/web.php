@@ -1,8 +1,12 @@
 <?php
 
+use App\Http\Controllers\RelasiController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BiodatasController;
+use App\Http\Controllers\PenggunaController;
+use App\Models\Mahasiswa;
+use App\Models\Wali;
 use App\Models\Post;
 use App\Models\Biodata;
 use App\Models\Siswa;
@@ -29,9 +33,9 @@ Route::get('halaman3', function () {
     return view('tampil3',compact('minuman'));
 });
 
-Route::get('post',[PostsController::class,'tampil']);
 
-Route::get('biodata',[BiodatasController::class,'tampil']);
+
+
 
 // Route::get('post',function () {
 
@@ -97,5 +101,24 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/products',[ProductController::class,'index'])->name('product');
+Route::get('/products/add',[ProductController::class,'store']);
+Route::get('/products/update',[ProductController::class,'update']);
+Route::get('/products/delete',[ProductController::class,'destroy']);
+//Route::get('post',[PostsController::class,'tampil']);
+//Route::get('biodata',[BiodatasController::class,'tampil']);
+route::resource('post', PostsController::class);
+route::resource('biodata', BiodatasController::class);
+route::resource('pengguna', PenggunaController::class);
 
-Route::get('/product',[ProductController::class,'index'])->name('product');
+Route::get('/one-to-one', [RelasiController::class, 'oneToOne']);
+Route::get('/wali-ke-mahasiswa', function () {
+    $wali = Wali::with('mahasiswa')->first();
+    return "{$wali->nama} adalah wali dari {$wali->mahasiswa->nama}";
+});
+
+Route::get('/one-to-many', [RelasiController::class, 'oneToMany']);
+Route::get('/mahasiswa-ke-dosen', function () {
+    $mhs = Mahasiswa::where('nim', '123456')->first();
+    return "{$mhs->nama} dibimbing oleh {$mhs->dosxen->nama}";
+});

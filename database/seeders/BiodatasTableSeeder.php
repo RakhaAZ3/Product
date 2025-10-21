@@ -21,8 +21,9 @@ class BiodatasTableSeeder extends Seeder
                 'tempat_lahir'=>'Bandung',
                 'agama'=>'Islam',
                 'alamat'=>'Bandung',
-                'telepon'=>89690589,
+                'telepon'=>"089690589",
                 'email'=>'rakha@gmail.com',
+                'cover'=>'.',
             ],
             [
                 'nama_lengkap'=>'Jihad',
@@ -31,8 +32,9 @@ class BiodatasTableSeeder extends Seeder
                 'tempat_lahir'=>'Bandung',
                 'agama'=>'Islam',
                 'alamat'=>'Bandung',
-                'telepon'=>89690589,
+                'telepon'=>"089690589",
                 'email'=>'jihad@gmail.com',
+                'cover'=>'.',
             ],
             [
                 'nama_lengkap'=>'Davin',
@@ -41,8 +43,9 @@ class BiodatasTableSeeder extends Seeder
                 'tempat_lahir'=>'Bandung',
                 'agama'=>'Islam',
                 'alamat'=>'Bandung',
-                'telepon'=>89690589,
+                'telepon'=>"089690589",
                 'email'=>'davin@gmail.com',
+                'cover'=>'.',
             ],
             [
                 'nama_lengkap'=>'Fakhri',
@@ -51,8 +54,9 @@ class BiodatasTableSeeder extends Seeder
                 'tempat_lahir'=>'Bandung',
                 'agama'=>'Islam',
                 'alamat'=>'Bandung',
-                'telepon'=>89690589,
+                'telepon'=>"089690589",
                 'email'=>'fakhri@gmail.com',
+                'cover'=>'.',
             ],
             [
                 'nama_lengkap'=>'jauf',
@@ -61,8 +65,9 @@ class BiodatasTableSeeder extends Seeder
                 'tempat_lahir'=>'Bandung',
                 'agama'=>'Islam',
                 'alamat'=>'Bandung',
-                'telepon'=>89690589,
+                'telepon'=>"089690589",
                 'email'=>'jauf@gmail.com',
+                'cover'=>'.',
             ],
             [
                 'nama_lengkap'=>'rehan',
@@ -71,8 +76,9 @@ class BiodatasTableSeeder extends Seeder
                 'tempat_lahir'=>'Bandung',
                 'agama'=>'Islam',
                 'alamat'=>'Bandung',
-                'telepon'=>89690589,
+                'telepon'=>"089690589",
                 'email'=>'rehan@gmail.com',
+                'cover'=>'.',
             ],
             [
                 'nama_lengkap'=>'teguh',
@@ -81,8 +87,9 @@ class BiodatasTableSeeder extends Seeder
                 'tempat_lahir'=>'Bandung',
                 'agama'=>'Islam',
                 'alamat'=>'Bandung',
-                'telepon'=>89690589,
+                'telepon'=>"089690589",
                 'email'=>'teguh@gmail.com',
+                'cover'=>'.',
             ],
             [
                 'nama_lengkap'=>'bara',
@@ -91,8 +98,9 @@ class BiodatasTableSeeder extends Seeder
                 'tempat_lahir'=>'Bandung',
                 'agama'=>'Islam',
                 'alamat'=>'Bandung',
-                'telepon'=>89690589,
+                'telepon'=>"089690589",
                 'email'=>'bara@gmail.com',
+                'cover'=>'.',
             ],
             [
                 'nama_lengkap'=>'fadil',
@@ -101,8 +109,9 @@ class BiodatasTableSeeder extends Seeder
                 'tempat_lahir'=>'Bandung',
                 'agama'=>'Islam',
                 'alamat'=>'Bandung',
-                'telepon'=>89690589,
+                'telepon'=>"089690589",
                 'email'=>'fadil@gmail.com',
+                'cover'=>'.',
             ],
             [
                 'nama_lengkap'=>'radit',
@@ -111,9 +120,10 @@ class BiodatasTableSeeder extends Seeder
                 'tempat_lahir'=>'Bandung',
                 'agama'=>'Islam',
                 'alamat'=>'Bandung',
-                'telepon'=>89690589,
+                'telepon'=>"089690589",
                 'email'=>'radit@gmail.com',
-            ],
+                'cover'=>'.',
+            ]
         ]);
     }
 }

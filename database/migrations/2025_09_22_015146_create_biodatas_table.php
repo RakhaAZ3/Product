@@ -19,8 +19,9 @@ return new class extends Migration
             $table->string('tempat_lahir');
             $table->string('agama');
             $table->text('alamat');
-            $table->integer('telepon');
+            $table->string('telepon');
             $table->string('email');
+            $table->string('cover');
             $table->timestamps();
         });
     }

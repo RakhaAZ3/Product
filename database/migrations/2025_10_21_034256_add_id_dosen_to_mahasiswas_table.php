@@ -11,12 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('posts', function (Blueprint $table) {
-            $table->id();
-            $table->string('title')->unique();
-            $table->string('content');
-            $table->string('cover');
-            $table->timestamps();
+        Schema::table('mahasiswas', function (Blueprint $table) {
+            $table->unsignedBigInteger('id_dosen')->nullable();
+            $table->foreign('id_dosen')->references('id')->on('dosens')->onDelete('set null');
         });
     }
 
@@ -25,6 +22,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('posts');
+        Schema::table('mahasiswas', function (Blueprint $table) {
+            //
+        });
     }
 };

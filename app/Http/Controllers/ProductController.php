@@ -13,14 +13,21 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::all();
+        return view('product',compact('products'));
 
-        return response()->json([
-            'status' => 200,
-            'success' => true,
-            'message' => 'Products berhasil diambil',
-            'data' => $products,
-        ]);
+        // return response()->json([
+        //     'status' => 200,
+        //     'success' => true,
+        //     'message' => 'Products berhasil diambil',
+        //     'data' => $products,
+        // ]);
     }
+
+    // public function tambah()
+    // {
+    //     $post = Post::all();
+    //     return view('halaman_post2',compact('post'));
+    // }
 
     /**
      * Show the form for creating a new resource.
@@ -35,7 +42,13 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $product = new product;
+        $product->name="Otak-Otak";
+        $product->description="enak";
+        $product->price="1000";
+        $product->stock="1000";
+        $product->save();
+        return $product;
     }
 
     /**
@@ -59,7 +72,13 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        $product = product::find(11);
+        $product->name="Basreng";
+        $product->description="Basreng Enak Dan Gurih";
+        $product->price="1000";
+        $product->stock="5000";
+        $product->save();
+        return $product;
     }
 
     /**
@@ -67,6 +86,8 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        $product=Product::find(11);
+        $product->delete();
+        return $product;
     }
 }

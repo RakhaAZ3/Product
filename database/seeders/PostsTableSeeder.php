@@ -17,10 +17,12 @@ class PostsTableSeeder extends Seeder
             [
                 'title'=>'Tips Cepat Pintar',
                 'content'=>'lorem Ipsum',
+                'cover'=>'.',
             ],
             [
                 'title'=>'Membangun Visi Misi Sukses',
                 'content'=>'lorem Ipsum',
+                'cover'=>'.',
             ]                   
         ]);
     }
