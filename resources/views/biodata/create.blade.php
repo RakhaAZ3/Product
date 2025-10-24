@@ -29,7 +29,6 @@
                             @error('jk')
                                 <small style="color: red;">{{$message}}</small>
                             @enderror
-                            {{-- <input type="text" class="form-control" name="jk" placeholder="Jenis Kelamin"> --}}
                         </div>
                         <div class="mb-3">
                             <label>Tanggal Lahir</label>

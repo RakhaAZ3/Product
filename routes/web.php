@@ -5,6 +5,12 @@ use App\Http\Controllers\PostsController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BiodatasController;
 use App\Http\Controllers\PenggunaController;
+use App\Http\Controllers\TeleponController;
+use App\Http\Controllers\KelasController;
+use App\Http\Controllers\MuridController;
+use App\Http\Controllers\BarangController;
+use App\Http\Controllers\PembeliController;
+use App\Http\Controllers\TransaksiController;
 use App\Models\Hobi;
 use App\Models\Mahasiswa;
 use App\Models\Wali;
@@ -111,6 +117,12 @@ Route::get('/products/delete',[ProductController::class,'destroy']);
 route::resource('post', PostsController::class);
 route::resource('biodata', BiodatasController::class);
 route::resource('pengguna', PenggunaController::class);
+route::resource('telepon', TeleponController::class);
+route::resource('kelas', KelasController::class);
+route::resource('murid', MuridController::class);
+route::resource('barang', BarangController::class);
+route::resource('pembeli', PembeliController::class);
+route::resource('transaksi', TransaksiController::class);
 
 Route::get('/one-to-one', [RelasiController::class, 'oneToOne']);
 Route::get('/wali-ke-mahasiswa', function () {
@@ -125,8 +137,8 @@ Route::get('/mahasiswa-ke-dosen', function () {
 });
 
 Route::get('/many-to-many', [RelasiController::class, 'manyToMany']);
-Route::get('/hobi/bola', function () {
-    $hobi = Hobi::where('nama_hobi', 'Bermain Bola')->first();
+Route::get('/hobi/coding', function () {
+    $hobi = Hobi::where('nama_hobi', 'Coding')->first();
     foreach ($hobi->mahasiswas as $mhs) {
         echo $mhs->nama . '<br>';
     }
